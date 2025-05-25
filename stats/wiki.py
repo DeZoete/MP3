@@ -1,13 +1,12 @@
-import wikipediaapi
+
 import openai
 
 # Initialize Wikipedia API
-wiki_wiki = wikipediaapi.Wikipedia('en')
 
 def get_wine_quality_info():
-    page = wiki_wiki.page("Wine_quality")  # Wikipedia page for wine quality
+    
     if not page.exists():
-        return "No information available from Wikipedia."
+        return "No information available."
 
     return page.summary  # Return the summary of the page
 
